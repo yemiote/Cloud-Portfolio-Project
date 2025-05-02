@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Opeyemi O. | Portfolio</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pap2so8U3U+x9s7LOvOQoszRAI3mReCfrFZd+RfGlrDL5eKjK9gz+x7LALt8b7Y8mXcKzJ9ghw2kCBZZ2dT+Vg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <style>
+    :root {
+      --dark-bg: #121212;
+      --dark-text: #f5f5f5;
+      --light-bg: #f5f5f5;
+      --light-text: #121212;
+      --primary-color: #00bcd4;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: var(--dark-bg);
+      color: var(--dark-text);
+      transition: all 0.3s ease;
+    }
+
+    body.light-mode {
+      background-color: var(--light-bg);
+      color: var(--light-text);
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      animation: fadeIn 1s ease-in;
+    }
+
+    header img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--primary-color);
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+
+    .section {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
+      animation: slideIn 0.7s ease;
+    }
+
+    .section h2 {
+      color: var(--primary-color);
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .toggle-container {
+      text-align: right;
+      padding: 1rem;
+    }
+
+    .toggle-container button {
+      background: none;
+      border: 1px solid var(--primary-color);
+      color: var(--primary-color);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .toggle-container button:hover {
+      background: var(--primary-color);
+      color: #fff;
+    }
+
+    .contact p {
+      margin: 0.5rem 0;
+    }
+
+    .contact i {
+      margin-right: 10px;
+      color: var(--primary-color);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="toggle-container">
+    <button onclick="toggleMode()">Toggle Light/Dark Mode</button>
+  </div>
+
+  <header>
+    <img src="https://opeyemi-cloud-lab.s3.us-east-1.amazonaws.com/profilepicture.jpg" alt="Opeyemi Oteniya's Picture">
+    <h1>Opeyemi Oteniya</h1>
+    <p>Cybersecurity Analyst | Cloud Solution Architect | Aspiring Cloud Security Expert</p>
+  </header>
+
+  <section class="section" id="about">
+    <h2>About Me</h2>
+    <p>
+      Coming from a non-tech background, my journey into the world of cybersecurity and cloud wasn’t a straight path—but it was a deeply intentional one. I’ve always been drawn to structure, systems, and the idea of protecting what matters. As I explored the ever-growing digital space, I realized just how essential security is in our everyday lives—especially in regions like Africa where awareness is still developing.
+    </p>
+    <p>
+      This realization sparked my passion to learn, build, and secure systems that are not only scalable but resilient. My commitment is rooted in a desire to protect and defend, while also contributing to a future where security isn’t just an afterthought, but a standard.
+    </p>
+    <p>
+      With several cloud and cybersecurity courses completed, I’m on a continuous journey of growth—eager to contribute, collaborate, and make a difference through secure innovation.
+    </p>
+  </section>
+
+  <section class="section" id="labs">
+    <h2>My Labs</h2>
+    <h3>Hosting a Static Website on AWS S3</h3>
+    <p>
+      My goal was to learn how to host a static website on AWS S3. I started by creating a bucket, uploading files, and enabling static hosting. Initially, I faced access denial and permission issues, which I solved by adjusting the bucket policies.
+    </p>
+    <p>
+      This experience helped me understand how static hosting on S3 works and deepened my knowledge of bucket policy configurations. It boosted my confidence and gave me a skill I can use to help businesses establish their online presence with ease.
+    </p>
+  </section>
+
+  <section class="section contact" id="contact">
+    <h2>Contact Me</h2>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:oteniyaopeyemi2@gmail.com">oteniyaopeyemi2@gmail.com</a></p>
+    <p><i class="fas fa-phone"></i> <a href="tel:+2348028343418">+2348028343418</a></p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/opeyemi-oteniya-793684302" target="_blank">LinkedIn</a></p>
+    <p><i class="fas fa-shield-alt"></i> <a href="https://tryhackme.com/p/Opeyemi001" target="_blank">TryHackMe</a></p>
+
+  </section>
+
+  <footer>
+    &copy; 2025 Opeyemi Oteni. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("light-mode");
+    }
+  </script>
+</body>
+</html>
